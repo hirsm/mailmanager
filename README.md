@@ -1,0 +1,28 @@
+# Mailmanager
+
+This app is to manage a mail server following the great instructions by Thomas Leister (cf. [here](https://thomas-leister.de/mailserver-debian-buster/)). It can be nearly used out of the box.
+
+This app is in German language, but can be easily used by anybody, since most actions are supported by colors.
+
+## Prerequesites
+
+- PHP 8.4
+- Composer
+
+## Setup
+
+1. Clone the repository, install Composer dependencies and point your domain/alias to `public`
+1. Copy `.env.example` to `.env` and insert the necessary data
+
+Since I modified Thomas's setup a bit, there is another column in the `accounts` table named `display_name`. This app expects it to be there and it must have a non-empty value. So either add this column and do not use it or feel free to fork this project (:
+
+## Security
+This app comes with absolutely no security features at all, so you have to use your own, like `.htpasswd`, single sign-on, etc.
+
+## Deleting domains and accounts
+
+You have to enable these features in `.env` to delete an account or a domain.
+
+If you want to delete a domain, you have to either delete all accounts and aliases before deleting a domain or you have to alter these tables so the constraints on `domain` or `source_domain`, respectively, do `CASCADE` the deletion of a domain.
+
+I am not sure how much sense it makes to enable deleting an account since you have to delete all mailbox content from the file system, but it is available in case anybody needs it.
