@@ -14,7 +14,7 @@ This app is in German language, but can be easily used by anybody, since most ac
 1. Clone the repository, install Composer dependencies and point your domain/alias to `public`
 1. Copy `.env.example` to `.env` and insert the necessary data
 
-Since I modified Thomas's setup a bit, there is another column in the `accounts` table named `display_name`. This app expects it to be there and it must have a non-empty value. So either add this column and do not use it or feel free to fork this project (:
+Since I modified Thomas's setup a bit, there is another column in the `accounts` table named `display_name`. This app expects it to be there and it must have a non-empty value when creating or editing an account. So either add this column and do not use it or feel free to fork this project (:
 
 ## Security
 This app comes with absolutely no security features at all, so you have to use your own, like `.htpasswd`, single sign-on, etc.
