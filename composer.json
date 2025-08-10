@@ -1,6 +1,6 @@
 {
   "name": "mailadmin/php",
-  "description": "Webinterface zur Verwaltung eines Mailservers (Accounts und Aliase)",
+  "description": "App to manage a mail server built after the setup by Thomas Leister.",
   "type": "project",
   "require": {
     "vlucas/phpdotenv": "^5.5",
@@ -14,7 +14,21 @@
   "scripts": {
         "post-update-cmd": [
             "rm -rf public/bootstrap",
-            "cp -R vendor/twbs/bootstrap/dist public/bootstrap"
+            "mkdir -p public/bootstrap/css",
+            "mkdir -p public/bootstrap/js",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.min.css public/bootstrap/css/bootstrap.min.css",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.min.css.map public/bootstrap/css/bootstrap.min.css.map",
+            "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js public/bootstrap/js/bootstrap.bundle.min.js",
+            "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map public/bootstrap/js/bootstrap.bundle.min.js.map"
+        ],
+        "post-install-cmd": [
+            "rm -rf public/bootstrap",
+            "mkdir -p public/bootstrap/css",
+            "mkdir -p public/bootstrap/js",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css public/bootstrap/css/bootstrap.min.css",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css.map public/bootstrap/css/bootstrap.min.css.map",
+            "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js public/bootstrap/js/bootstrap.bundle.min.js",
+            "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map public/bootstrap/js/bootstrap.bundle.min.js.map"
         ]
   }
 }

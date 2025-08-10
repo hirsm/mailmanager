@@ -1,12 +1,14 @@
 <!doctype html>
+
 <html lang="de">
 <head>
     <meta charset="utf-8">
     <title>Mailmanager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/color_mode.js?"></script>
 </head>
-<body class="bg-light">
+<body class="">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="?">Mailmanager</a>
