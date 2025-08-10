@@ -14,15 +14,19 @@
   "scripts": {
         "post-update-cmd": [
             "rm -rf public/bootstrap",
-            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css public/bootstrap/css/bootstrap.css",
-            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css.map public/bootstrap/css/bootstrap.css.map",
+            "mkdir -p public/bootstrap/css",
+            "mkdir -p public/bootstrap/js",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.min.css public/bootstrap/css/bootstrap.min.css",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.min.css.map public/bootstrap/css/bootstrap.min.css.map",
             "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js public/bootstrap/js/bootstrap.bundle.min.js",
             "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map public/bootstrap/js/bootstrap.bundle.min.js.map"
         ],
-        "post-instal-cmd": [
+        "post-install-cmd": [
             "rm -rf public/bootstrap",
-            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css public/bootstrap/css/bootstrap.css",
-            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css.map public/bootstrap/css/bootstrap.css.map",
+            "mkdir -p public/bootstrap/css",
+            "mkdir -p public/bootstrap/js",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css public/bootstrap/css/bootstrap.min.css",
+            "cp -R vendor/twbs/bootstrap/dist/css/bootstrap.css.map public/bootstrap/css/bootstrap.min.css.map",
             "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js public/bootstrap/js/bootstrap.bundle.min.js",
             "cp -R vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js.map public/bootstrap/js/bootstrap.bundle.min.js.map"
         ]
